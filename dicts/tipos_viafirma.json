@@ -1,0 +1,29 @@
+{
+    "contratos": {
+        "Desestimaci\u00f3n": "Rechazado",
+        "No Objeci\u00f3n": "Aprobado"
+    },
+    "info_financiera": {
+        "Central de Riesgos": "Aprobado",
+        "Inadmisible": "Rechazado",
+        "Informaci\u00f3n Financiera": "Aprobado",
+        "Restricción": "Aprobado"
+    },
+    "reclamos": {
+        "Carta Favorable": "Favorable",
+        "Carta Informativa": "Otra",
+        "Inadmisible": "Otra",
+        "Reitera Inadmisible": "Otra",
+        "Desfavorable": "Desfavorable",
+        "Favorable": "Favorable",
+        "Parcial Favorable": "Favorable",
+        "Notificaci\u00f3n Recurso": "Otra",
+        "Reitera Desfavorable EIF": "Favorable",
+        "Reitera Desfavorable Usuario": "Desfavorable",
+        "Revoca Favorable EIF": "Favorable",
+        "Revoca Favorable Usuario": "Desfavorable",
+        "Revoca Parcial EIF": "Favorable",
+        "Revoca Parcial Usuario": "Desfavorable",
+        "Otro": "Otra"
+    }
+}

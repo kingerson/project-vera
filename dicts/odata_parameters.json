@@ -1,0 +1,238 @@
+{
+	"headers":{
+			"OData-MaxVersion":"4.0",
+			"OData-Version":"4.0",
+			"Accept":"application/json",
+			"Content-Type":"application/json; charset=utf-8",
+			"Prefer":"odata.include-annotations=OData.Community.Display.V1.FormattedValue"
+		},
+	"format_label":"OData.Community.Display.V1.FormattedValue",
+	"reclamos": {
+		"tabla": "new_reclamacins",
+		"droppable_columns": [
+			"new_reclamacinid",
+			"_transactioncurrencyid_value",
+			"_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue"
+		],
+		"query_cols": [
+			"new_codigo",
+			"createdon",
+			"statuscode",
+			"new_fechadeverificaciondelcaso",
+			"new_reconsideracion",
+			"_new_eifid_value",
+			"_new_tipodereclamacinid_value",
+			"_new_tipodeproductoid_value",
+			"_new_canaldedistribucinid_value",
+			"new_genero",
+			"_new_provinciaid_value",
+			"new_ciudad",
+			"new_tipoderespuecta",
+			"new_montoreclamado1",
+			"_new_tipodedivisa_value",
+			"new_montoreclamado2",
+			"_new_tipodedivisa2_value",
+			"new_montoacreditado1",
+			"_new_tipodedivisaacreditada1_value",
+			"new_montoacreditado2",
+			"_new_tipodedivisaacreditada2_value"
+		],
+		"columnas_para_firma": [
+			"new_etapaactiva",
+			"new_duracionetapa1",
+			"new_duracionetapa2",
+			"new_duracionetapa3"
+		],
+		"nuevos_nombres_columnas": {
+			"new_codigo": "codigo",
+			"createdon": "fecha_creacion",
+			"statuscode": "activa",
+			"new_fechadeverificaciondelcaso": "fecha_verificacion",
+			"new_reconsideracion": "reconsideracion",
+			"_new_eifid_value": "entidad",
+			"_new_tipodereclamacinid_value": "tipo_reclamo",
+			"_new_tipodeproductoid_value": "tipo_producto",
+			"_new_canaldedistribucinid_value": "canal",
+			"new_genero": "genero",
+			"_new_provinciaid_value": "provincia",
+			"new_ciudad": "ciudad",
+			"new_montoreclamado1": "monto_reclamo1",
+			"_new_tipodedivisa_value": "divisa_reclamo1",
+			"new_montoreclamado2": "monto_reclamo2",
+			"_new_tipodedivisa2_value": "divisa_reclamo2",
+			"new_montoacreditado1": "monto_credito1",
+			"_new_tipodedivisaacreditada1_value": "divisa_credito1",
+			"new_montoacreditado2": "monto_credito2",
+			"_new_tipodedivisaacreditada2_value": "divisa_credito2",
+			"new_tipoderespuecta": "respuesta_crm"
+		},
+		"mapa_columnas_firma": {
+			"new_etapaactiva": "etapa_activa",
+			"new_duracionetapa1": "etapa1",
+			"new_duracionetapa2": "etapa2",
+			"new_duracionetapa3": "etapa3"
+		}
+	},
+	"info_financiera": {
+		"tabla": "new_procesodeinformacionfinancieras",
+		"droppable_columns": [
+			"new_procesodeinformacionfinancieraid"
+		],
+		"query_cols": [
+			"createdon",
+			"new_fechaderespuestadestatustramite",
+			"new_fechadondeseestableceadmisioncondicionada",
+			"new_name",
+			"_new_tipodesolicitante_value",
+			"statuscode",
+			"new_etapa",
+			"new_tipodesolicitud",
+			"_new_tipodeinformacionsolicitada_value"
+
+		],
+		"nuevos_nombres_columnas": {
+			"createdon": "fecha_creacion",
+			"new_fechaderespuestadestatustramite": "fecha_verificacion",
+			"new_fechadondeseestableceadmisioncondicionada": "fecha_condicionada",
+			"new_name": "codigo",
+			"_new_tipodesolicitante_value":  "tipo_persona",
+			"statuscode": "activa",
+			"new_etapa": "etapa_actual",
+			"new_tipodesolicitud": "tipo_solicitud",
+			"_new_tipodeinformacionsolicitada_value": "tipo_info_solicitada"
+		}
+	},
+	"notificaciones": {
+		"reclamos":{
+			"tabla":"new_reclamacins",
+			"droppable_columns":[
+				"new_reclamacinid",
+				"_transactioncurrencyid_value",
+				"_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue",
+				"new_reclamante"
+			],
+			"query":"https://vmsvrcrm01.supernet.gov.do/Dynamics365-SIB/api/data/v9.0/new_reclamacins?$select=new_codigo,createdon,new_fechadeverificaciondelcaso,new_reconsideracion,new_etapaactiva,_ownerid_value,new_nombre,new_apellidos,new_razonsocial,_new_eifid_value,_new_tipodereclamacinid_value,_new_tipodeproductoid_value,new_montoreclamado1,_new_tipodedivisa_value,new_montoreclamado2,_new_tipodedivisa2_value&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName='createdon',PropertyValue=25) and new_etapaactiva ne 4 and statuscode ne 2&$expand=new_reclamante($select=new_emailreclamante)",
+			"nuevos_nombres_columnas":{
+				"new_codigo": "codigo",
+				"createdon": "fecha_creacion",
+				"new_fechadeverificaciondelcaso": "fecha_verificacion",
+				"new_reconsideracion": "reconsideracion",
+				"new_razonsocial": "razon_social",
+				"_new_eifid_value": "eif",
+				"_new_tipodereclamacinid_value": "tipo_reclamo",
+				"_new_tipodeproductoid_value": "tipo_producto",
+				"new_etapaactiva": "etapa",
+				"new_montoreclamado1": "monto_reclamo1",
+				"_new_tipodedivisa_value": "divisa_reclamo1",
+				"new_montoreclamado2": "monto_reclamo2",
+				"_new_tipodedivisa2_value": "divisa_reclamo2",
+				"new_reclamante.new_emailreclamante": "correo_solicitante",
+				"_ownerid_value": "responsable"
+			}
+		},
+		"infofinanciera":{
+			"tabla":"new_procesodeinformacionfinancieras",
+			"droppable_columns":[
+				"new_Solicitante.__DisplayName__",
+				"new_Solicitante.IsReferencedQueryCall",
+				"new_procesodeinformacionfinancieraid"
+			],
+			"query":"https://vmsvrcrm01.supernet.gov.do/Dynamics365-SIB/api/data/v9.0/new_procesodeinformacionfinancieras?$select=new_name,createdon,new_fechaderespuestadestatustramite,new_etapa,_ownerid_value,_new_solicitante_value,_new_tipodeinformacionsolicitada_value,new_estatusslageneral&$filter=Microsoft.Dynamics.CRM.OlderThanXDays(PropertyName='createdon',PropertyValue=20) and _new_tipodeinformacionsolicitada_value ne 50286168-2c20-eb11-a2ea-005056a59c6f and new_etapa ne 6 and statuscode ne 2&$expand=new_Solicitante($select=new_emailreclamante)",
+			"nuevos_nombres_columnas":{
+				"createdon": "fecha_creacion",
+				"new_fechaderespuestadestatustramite": "fecha_verificacion",
+				"new_name": "codigo",
+				"_new_solicitante_value": "solicitante",
+				"_new_tipodeinformacionsolicitada_value": "tipo_info_solicitada",
+				"new_etapa": "etapa",
+				"new_estatusslageneral": "status_sla",
+				"new_Solicitante.new_emailreclamante": "correo_solicitante",
+				"_ownerid_value": "responsable"
+			}
+		}
+	},
+	"reclamos_general":{
+		"tabla": "new_reclamacins",
+		"droppable_columns": [
+			"new_reclamacinid",
+			"_transactioncurrencyid_value",
+			"_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue"
+		],
+		"query_cols": [
+			"new_codigo",
+			"createdon",
+			"statuscode",
+			"new_genero",
+			"new_fechadeverificaciondelcaso",
+			"new_reconsideracion",
+			"_new_eifid_value",
+			"_new_tipodereclamacinid_value",
+			"_new_tipodeproductoid_value",
+			"_new_canaldedistribucinid_value",
+			"new_montoreclamado1",
+			"_new_tipodedivisa_value",
+			"new_montoreclamado2",
+			"_new_tipodedivisa2_value",
+			"new_montoacreditado1",
+			"_new_tipodedivisaacreditada1_value",
+			"new_montoacreditado2",
+			"_new_tipodedivisaacreditada2_value"
+		],
+		"nuevos_nombres_columnas": {
+			"new_codigo": "codigo",
+			"createdon": "fecha_creacion",
+			"statuscode": "activa",
+			"new_fechadeverificaciondelcaso": "fecha_verificacion",
+			"new_reconsideracion": "reconsideracion",
+			"new_genero": "genero_reclamante",
+			"_new_eifid_value": "entidad",
+			"_new_tipodereclamacinid_value": "tipo_reclamo",
+			"_new_tipodeproductoid_value": "tipo_producto",
+			"_new_canaldedistribucinid_value": "canal",
+			"new_montoreclamado1": "monto_reclamo1",
+			"_new_tipodedivisa_value": "divisa_reclamo1",
+			"new_montoreclamado2": "monto_reclamo2",
+			"_new_tipodedivisa2_value": "divisa_reclamo2",
+			"new_montoacreditado1": "monto_credito1",
+			"_new_tipodedivisaacreditada1_value": "divisa_credito1",
+			"new_montoacreditado2": "monto_credito2",
+			"_new_tipodedivisaacreditada2_value": "divisa_credito2"
+		}
+	},
+	"if_general": {
+			"tabla": "new_procesodeinformacionfinancieras",
+			"droppable_columns": [
+				"new_procesodeinformacionfinancieraid"
+			],
+			"query_cols": [
+				"createdon",
+				"new_fechaderespuestadestatustramite",
+				"new_fechadondeseestableceadmisioncondicionada",
+				"new_name",
+				"statuscode",
+				"new_etapa",
+				"new_duracionetapa1",
+				"new_duracionetapa2",
+				"new_duracionetapa3",
+				"new_duracionetapa4",
+				"new_duracionetapa5",
+				"new_duracionetapa6",
+				"_new_tipodeinformacionsolicitada_value"
+			],
+			"nuevos_nombres_columnas": {
+				"createdon": "fecha_creacion",
+				"new_fechaderespuestadestatustramite": "fecha_verificacion",
+				"new_fechadondeseestableceadmisioncondicionada": "fecha_condicionada",
+				"new_name": "codigo",
+				"statuscode": "activa",
+				"new_etapa": "etapa_actual",
+				"new_duracionetapa1": "etapa1",
+				"new_duracionetapa2": "etapa2",
+				"new_duracionetapa3": "etapa3",
+				"new_duracionetapa4": "etapa4",
+				"new_duracionetapa5": "etapa5",
+				"new_duracionetapa6": "etapa6",
+				"_new_tipodeinformacionsolicitada_value": "tipo_info_solicitada"
+			}
+		}
+}

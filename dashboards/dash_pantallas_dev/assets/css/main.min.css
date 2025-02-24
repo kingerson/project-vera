@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "SairaLight";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../fonts/Saira-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaRegular";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Saira-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaItalic";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/Saira-Italic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaMedium";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/Saira-Medium.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaMediumItalic";
+    font-weight: 500;
+    font-style: italic;
+    src: url("../fonts/Saira-MediumItalic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaSemiBold";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../fonts/Saira-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaBold";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/Saira-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "SairaExtraBold";
+    font-weight: 800;
+    font-style: normal;
+    src: url("../fonts/Saira-ExtraBold.ttf") format("opentype");
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "SairaLight";
+    color: #172f45;
+    background: #e9eef2;
+}
+
+body * {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body .main_layout_reverse {
+    display: flex;
+    z-index: 1;
+    flex-flow: column-reverse;
+}
+
+body a {
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+
+body .negative_top_margin {
+    margin-top: -32px;
+}
+
+body .bottom_left_border_radius {
+    border-bottom-left-radius: 32px;
+}
+
+body .grecaptcha-badge {
+    visibility: hidden;
+}
+
+body .using_richtext_editor {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    font-family: "SairaRegular";
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@media (min-width: 960px) {
+    body .using_richtext_editor {
+        font-size: 17px;
+    }
+}
+
+body .using_richtext_editor p {
+    margin: 16px 0 0;
+}
+
+body .using_richtext_editor p:first-child {
+    margin-top: 0;
+}
+
+@media (min-width: 960px) {
+    body .using_richtext_editor p {
+        margin: 24px 0 0;
+    }
+}
+
+body .using_richtext_editor a {
+    font-family: "SairaSemiBold";
+    color: #29bfc2;
+}
+
+body .using_richtext_editor strong {
+    font-family: "SairaBold";
+}
+
+body .using_richtext_editor ul, body .using_richtext_editor ol {
+    padding-inline-start: 24px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 960px) {
+    body .using_richtext_editor ul, body .using_richtext_editor ol {
+        padding-inline-start: 32px;
+    }
+}
+
+body .using_richtext_editor ul:first-child, body .using_richtext_editor ol:first-child {
+    margin-top: 0;
+}
+
+body .using_richtext_editor ul li, body .using_richtext_editor ol li {
+    margin-top: 12px;
+}
+
+body .using_richtext_editor ul li:first-child, body .using_richtext_editor ol li:first-child {
+    margin-top: 4px;
+}
+
+@media (min-width: 960px) {
+    body .using_richtext_editor ul li, body .using_richtext_editor ol li {
+        margin-top: 16px;
+    }
+
+    body .using_richtext_editor ul li:first-child, body .using_richtext_editor ol li:first-child {
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 960px) {
+    body .negative_top_margin {
+        margin-top: -50px;
+    }
+
+    body .bottom_left_border_radius {
+        border-bottom-left-radius: 50px;
+    }
+}
